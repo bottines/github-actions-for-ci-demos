@@ -1,0 +1,27 @@
+version: 2
+updates:
+
+  # Set update schedule for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Check for workflow files in .github/workflows
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every weekday
+      interval: "daily"
+  
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+  
+  # Enable version updates for pip.
+  # Keeps your dependencies up-to-date.
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+    
